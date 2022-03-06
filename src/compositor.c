@@ -1158,6 +1158,7 @@ load_backend(struct ivi_compositor *ivi, const char *backend,
 	     int *argc, char *argv[])
 {
 	if (strcmp(backend, "drm-backend.so") == 0) {
+		load_drm_backend(ivi, argc, argv);
 		return load_drm_backend(ivi, argc, argv);
 	} else if (strcmp(backend, "wayland-backend.so") == 0) {
 		return load_wayland_backend(ivi, argc, argv);
